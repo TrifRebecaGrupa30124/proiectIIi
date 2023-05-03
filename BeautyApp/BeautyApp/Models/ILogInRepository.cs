@@ -11,6 +11,6 @@ namespace BeautyApp.Models
         void Add(ModelLogIn logInModel);
         void Edit(ModelLogIn logInModel);
         void Delete(int id);
-        IEnumerable<ModelLogIn> GetAll();
+        ModelLogIn GetAll();
     }
 }

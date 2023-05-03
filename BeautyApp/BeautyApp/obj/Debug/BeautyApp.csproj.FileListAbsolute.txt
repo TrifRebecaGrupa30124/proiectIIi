@@ -9,3 +9,4 @@ C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\bin\Debug\BeautyApp.exe
 C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\bin\Debug\BeautyApp.pdb
 C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.exe
 C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.pdb
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Views.LogInView.resources

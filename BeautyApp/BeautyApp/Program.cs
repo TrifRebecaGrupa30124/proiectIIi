@@ -21,9 +21,9 @@ namespace BeautyApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["BeautyApp.Properties.Settings.SqlConnection"].ConnectionString;
-            IMainView view = new MainView();
-            new MainPresenter(view, sqlConnectionString);
-
+            ILogInView view = new LogInView();
+            ILogInRepository repository = new LogInRepository(sqlConnectionString);
+            new LogInPresenter(view, repository, sqlConnectionString);
             Application.Run((Form)view);
         }
     }

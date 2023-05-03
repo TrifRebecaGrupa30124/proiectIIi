@@ -32,17 +32,60 @@ namespace BeautyApp.Repositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "delete from Admin where Admin_id=@id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
+
+
         }
 
-        public void Edit(ModelLogIn petModel)
+        public void Edit(ModelLogIn logInModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"update Admin 
+                                    set Admin_Name=@name,Admin_Parola= @password
+                                    where Admin_Id=@id";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = logInModel.Name;
+                command.Parameters.Add("@password", SqlDbType.NVarChar).Value = logInModel.Password;
+
+                command.Parameters.Add("@id", SqlDbType.Int).Value = logInModel.Id;
+                command.ExecuteNonQuery();
+            }
         }
 
-        public IEnumerable<ModelLogIn> GetAll()
+        public ModelLogIn GetAll()
         {
-            throw new NotImplementedException();
+            var adminList = new ModelLogIn();
+            //var adminList = new ModelLogIn();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "Select *from Admin order by Admin_Id";
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        adminList.Id = (int)reader[0];
+                        adminList.Name = reader[1].ToString();
+                        adminList.Password = reader[2].ToString();
+
+                    }
+                }
+            }
+            return adminList;
         }
     }
 }
