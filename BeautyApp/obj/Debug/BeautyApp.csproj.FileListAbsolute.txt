@@ -1,0 +1,13 @@
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.csprojAssemblyReference.cache
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Properties.Resources.resources
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Views.MainView.resources
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Views.ProductView.resources
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.csproj.GenerateResource.cache
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.csproj.CoreCompileInputs.cache
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\bin\Debug\BeautyApp.exe.config
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\bin\Debug\BeautyApp.exe
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\bin\Debug\BeautyApp.pdb
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.exe
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.pdb
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Views.LogInView.resources
+C:\Users\Rebeca\source\repos\BeautyApp\BeautyApp\obj\Debug\BeautyApp.Views.EmployeeView.resources
