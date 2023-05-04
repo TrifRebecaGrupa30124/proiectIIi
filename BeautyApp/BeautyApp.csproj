@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="...Repositories\BaseRepository.cs" />
+    <Compile Include="...Repositories\BasketRepository.cs" />
     <Compile Include="...Repositories\EmployeeRepository.cs" />
     <Compile Include="...Repositories\LogInRepository.cs" />
     <Compile Include="...Repositories\ProductRepository.cs" />
@@ -58,7 +59,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BasketModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\IBasketRepository.cs" />
     <Compile Include="Models\IEmployeeRepository.cs" />
     <Compile Include="Models\ILogInRepository.cs" />
     <Compile Include="Models\IProductRepository.cs" />

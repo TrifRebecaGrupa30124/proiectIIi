@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BeautyApp.Models
 {
-    class ProductModel
+    class BasketModel
     {
         private int id;
         private string name;
         private string description;
         private string price;
         private string ammount;
-       
+
         //Properties - Validations
         [DisplayName("ID")]
         public int Id

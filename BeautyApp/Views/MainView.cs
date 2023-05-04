@@ -17,10 +17,14 @@ namespace BeautyApp.Views
             InitializeComponent();
             btnPets.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             btnEmployee.Click += delegate { ShowEmployeeView?.Invoke(this, EventArgs.Empty); };
+            buttonLogOut.Click += delegate {
+                this.Close();
+                LogOut?.Invoke(this, EventArgs.Empty); };
             buttonCancel.Click += delegate { this.Close(); };
         }
         public event EventHandler ShowProductView;
         public event EventHandler ShowEmployeeView;
+        public event EventHandler LogOut;
         //public event EventHandler ShowVetsView;
     }
 }
