@@ -2,6 +2,7 @@
 using BeautyApp.Views;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace BeautyApp.Presenters
         private IProductRepository repository;
         private BindingSource productBindingSource;
         private IEnumerable<ProductModel> productList;
-
+        
         //Constructor
         public ProductPresenter(IProductView view, IProductRepository repository)
         {
@@ -30,8 +31,10 @@ namespace BeautyApp.Presenters
             this.view.DeleteEvent += DeleteSelectedProduct;
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
+            this.view.CurrentEvent += CurrentProduct;
             //Set pets bindind source
             this.view.SetProductListBindingSource(productBindingSource);
+
             //Load pet list view
             LoadAllProductList();
             //Show view
@@ -40,8 +43,12 @@ namespace BeautyApp.Presenters
         //Methods
         private void LoadAllProductList()
         {
+           
+            
+           
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;//Set data source.
+            
         }
         private void SearchProduct(object sender, EventArgs e)
         {
@@ -55,6 +62,13 @@ namespace BeautyApp.Presenters
         {
             CleanviewFields();
         }
+        private void CurrentProduct(object sender, EventArgs e)
+        {
+            var product = productBindingSource.Current.ToString();
+            view.ProductImage = new Bitmap("Images/untitled1.jpg");
+            view.ProductAmmount = productBindingSource.Current.ToString();
+
+        }
         private void SaveProduct(object sender, EventArgs e)
         {
             var model = new ProductModel();
@@ -63,6 +77,7 @@ namespace BeautyApp.Presenters
             model.Description = view.ProductDescription;
             model.Price = view.ProductPrice;
             model.Ammount = view.ProductAmmount;
+          
             try
             {
                 new Common.ModelDataValidation().Validate(model);
@@ -118,6 +133,7 @@ namespace BeautyApp.Presenters
             view.ProductDescription = product.Description;
             view.ProductPrice = product.Price;
             view.ProductAmmount = product.Ammount;
+            
             view.IsEdit = true;
         }
         private void AddNewProduct(object sender, EventArgs e)

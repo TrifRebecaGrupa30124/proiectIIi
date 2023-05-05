@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace BeautyApp.Presenters
 {
-    class LogInPresenter : LogInView
+    class LogInPresenter 
     {
         Thread th;
         private readonly string sqlConnectionString;
@@ -32,10 +32,15 @@ namespace BeautyApp.Presenters
             ModelLogIn m = (ModelLogIn)repository.GetAll();
             if (m.Id == Convert.ToInt32(view.Admin_Id) && m.Name == view.AdminName && m.Password == view.AdminPassword)
             {
-                this.Close();
+                LogInView.ActiveForm.Close();
+
                 th = new Thread(tFunction);
                 th.Start();
+
             }
+            else MessageBox.Show("User name/password incorrect or is missing", "Warning",
+                      MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 
 
         }
@@ -50,5 +55,5 @@ namespace BeautyApp.Presenters
         }
 
     }
-  
+
 }

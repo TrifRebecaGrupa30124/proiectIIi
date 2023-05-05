@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace BeautyApp.Models
         private string description;
         private string price;
         private string ammount;
+        private string image;
+       
        
         //Properties - Validations
         [DisplayName("ID")]
@@ -31,6 +34,7 @@ namespace BeautyApp.Models
             get { return name; }
             set { name = value; }
         }
+           
         [DisplayName("Description")]
         [Required(ErrorMessage = "Product description is requerid")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Product description must be between 3 and 50 characters")]

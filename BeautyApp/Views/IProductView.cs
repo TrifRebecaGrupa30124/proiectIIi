@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,9 @@ namespace BeautyApp.Views
 {
     public interface IProductView
     {
+
         string ProductId { get; set; }
+       
         string ProductName_ { get; set; }
         string ProductDescription { get; set; }
         string ProductPrice { get; set; }
@@ -18,6 +21,7 @@ namespace BeautyApp.Views
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }
+         Bitmap ProductImage { get; set; }
         //Events
         event EventHandler SearchEvent;
         event EventHandler AddNewEvent;
@@ -25,6 +29,7 @@ namespace BeautyApp.Views
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
+        event EventHandler CurrentEvent;
         //Methods
         void SetProductListBindingSource(BindingSource productList);
         void Show();

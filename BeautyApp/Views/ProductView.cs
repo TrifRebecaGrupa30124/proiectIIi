@@ -38,7 +38,7 @@ namespace BeautyApp.Views
             //Others
             //Add new
 
-
+            dataGridView.Click += delegate { CurrentEvent?.Invoke(this, EventArgs.Empty); };
             btnAddNew.Click += delegate
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
@@ -89,6 +89,7 @@ namespace BeautyApp.Views
             get { return txtProductId.Text; }
             set { txtProductId.Text = value; }
         }
+      
         public string ProductName_
         {
             get { return txtProductName.Text; }
@@ -129,16 +130,44 @@ namespace BeautyApp.Views
             get { return message; }
             set { message = value; }
         }
+        public Bitmap ProductImage
+        {
+            get
+            {
+                return new Bitmap(pictureBox1.Image);
+
+            }
+            set
+            {
+                pictureBox1.Image = value;
+
+            }
+        }
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+        public event EventHandler CurrentEvent;
         //Methods
         public void SetProductListBindingSource(BindingSource petList)
         {
+
+
+           /* DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
+            imgCol.HeaderText = "Images";
+            imgCol.Image = new Bitmap(imageP);
+
+            dataGridView.Columns.Add(imgCol);*/
             dataGridView.DataSource = petList;
+          
+            
+
+            // dataGridView.Rows.Add(img);
+           
+
+
         }
 
         private static ProductView instance;

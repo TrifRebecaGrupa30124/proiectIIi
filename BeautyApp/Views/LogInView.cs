@@ -15,7 +15,7 @@ namespace BeautyApp.Views
 {
     public partial class LogInView : Form, ILogInView
     {
-        Thread th;
+       
         public LogInView()
         {
             InitializeComponent();

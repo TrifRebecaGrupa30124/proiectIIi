@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,7 @@ namespace BeautyApp.Repositories
                         productModel.Description = reader[2].ToString();
                         productModel.Price = reader[3].ToString();
                         productModel.Ammount = reader[4].ToString();
+                       
                         productList.Add(productModel);
                     }
                 }
@@ -66,6 +68,7 @@ namespace BeautyApp.Repositories
                         petModel.Description = reader[2].ToString();
                         petModel.Price = reader[3].ToString();
                         petModel.Ammount = reader[4].ToString();
+                       
                         petList.Add(petModel);
                     }
                 }
@@ -84,6 +87,7 @@ namespace BeautyApp.Repositories
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
                 command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
                 command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = productModel.Ammount;
+               
                 command.ExecuteNonQuery();
             }
         }
@@ -113,6 +117,7 @@ namespace BeautyApp.Repositories
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
                 command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
                 command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = productModel.Ammount;
+               
                 command.Parameters.Add("@id", SqlDbType.Int).Value = productModel.Id;
                 command.ExecuteNonQuery();
             }

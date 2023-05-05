@@ -46,7 +46,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 667);
+            this.panel1.Size = new System.Drawing.Size(361, 716);
             this.panel1.TabIndex = 0;
             // 
             // btnEmployee
@@ -73,7 +73,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(361, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(731, 48);
+            this.panel2.Size = new System.Drawing.Size(966, 48);
             this.panel2.TabIndex = 1;
             // 
             // buttonCancel
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 667);
+            this.ClientSize = new System.Drawing.Size(1327, 716);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;

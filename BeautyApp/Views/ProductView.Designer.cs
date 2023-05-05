@@ -51,11 +51,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControlPet.SuspendLayout();
             this.tabPagePetList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPagePetDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1079, 100);
+            this.panel1.Size = new System.Drawing.Size(1223, 100);
             this.panel1.TabIndex = 0;
             // 
             // btnClose
@@ -83,11 +85,12 @@
             this.tabControlPet.Location = new System.Drawing.Point(0, 95);
             this.tabControlPet.Name = "tabControlPet";
             this.tabControlPet.SelectedIndex = 0;
-            this.tabControlPet.Size = new System.Drawing.Size(1079, 573);
+            this.tabControlPet.Size = new System.Drawing.Size(1223, 615);
             this.tabControlPet.TabIndex = 1;
             // 
             // tabPagePetList
             // 
+            this.tabPagePetList.Controls.Add(this.pictureBox1);
             this.tabPagePetList.Controls.Add(this.btnDelete);
             this.tabPagePetList.Controls.Add(this.txtSearch);
             this.tabPagePetList.Controls.Add(this.btnEdit);
@@ -97,7 +100,7 @@
             this.tabPagePetList.Location = new System.Drawing.Point(4, 25);
             this.tabPagePetList.Name = "tabPagePetList";
             this.tabPagePetList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePetList.Size = new System.Drawing.Size(1071, 544);
+            this.tabPagePetList.Size = new System.Drawing.Size(1215, 586);
             this.tabPagePetList.TabIndex = 0;
             this.tabPagePetList.Text = "See Products List";
             this.tabPagePetList.UseVisualStyleBackColor = true;
@@ -132,8 +135,10 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(8, 86);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(487, 269);
+            this.dataGridView.RowHeadersWidth = 75;
+            this.dataGridView.RowTemplate.Height = 140;
+            this.dataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.Size = new System.Drawing.Size(664, 312);
             this.dataGridView.TabIndex = 3;
             // 
             // btnSearch
@@ -229,6 +234,7 @@
             this.txtProductId.ReadOnly = true;
             this.txtProductId.Size = new System.Drawing.Size(100, 22);
             this.txtProductId.TabIndex = 5;
+            this.txtProductId.Text = "0";
             // 
             // label5
             // 
@@ -275,11 +281,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(769, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 170);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // ProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 680);
+            this.ClientSize = new System.Drawing.Size(1223, 709);
             this.Controls.Add(this.tabControlPet);
             this.Controls.Add(this.panel1);
             this.Name = "ProductView";
@@ -291,6 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabPagePetDetail.ResumeLayout(false);
             this.tabPagePetDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +335,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
