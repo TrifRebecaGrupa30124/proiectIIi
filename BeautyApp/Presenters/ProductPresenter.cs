@@ -70,7 +70,7 @@ namespace BeautyApp.Presenters
         {
             var product = (ProductModel)productBindingSource.Current;
 
-            view.ProductImage = new Bitmap("Images/" + product.Name + ".jpeg");
+            view.ProductImage = new Bitmap("Images/" + product.Name + ".png");
 
         }
 
@@ -88,7 +88,7 @@ namespace BeautyApp.Presenters
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            File.Move(fname, "Images/" + view.ProductName_ + ".jpeg");
+            File.Move(fname, "Images/" + view.ProductName_ + ".png");
             /* String dest = "Images/" + view.ProductName_ + "1" + ".jpeg";
              System.IO.File.Copy(fname, dest);
              view.SelectProductImage = new Bitmap(dest);
@@ -139,6 +139,8 @@ namespace BeautyApp.Presenters
             try
             {
                 var product = (ProductModel)productBindingSource.Current;
+                var nameFile = product.Name;
+                File.Delete("Images/" + nameFile + ".png");
                 repository.Delete(product.Id);
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully";

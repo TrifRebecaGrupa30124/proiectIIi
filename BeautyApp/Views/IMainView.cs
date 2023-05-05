@@ -11,6 +11,7 @@ namespace BeautyApp.Views
         event EventHandler ShowProductView;
         event EventHandler ShowEmployeeView;
         event EventHandler ShowCustomerView;
+        event EventHandler ShowBasketView;
         event EventHandler LogOut;
     }
 }

@@ -37,6 +37,7 @@
             this.ctxtname = new System.Windows.Forms.TextBox();
             this.ctxtphone = new System.Windows.Forms.TextBox();
             this.ctxtaddress = new System.Windows.Forms.TextBox();
+            this.bbtnclose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -119,11 +120,21 @@
             this.ctxtaddress.Size = new System.Drawing.Size(100, 22);
             this.ctxtaddress.TabIndex = 2;
             // 
+            // bbtnclose
+            // 
+            this.bbtnclose.Location = new System.Drawing.Point(791, 43);
+            this.bbtnclose.Name = "bbtnclose";
+            this.bbtnclose.Size = new System.Drawing.Size(75, 23);
+            this.bbtnclose.TabIndex = 6;
+            this.bbtnclose.Text = "close";
+            this.bbtnclose.UseVisualStyleBackColor = true;
+            // 
             // BasketView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 658);
+            this.Controls.Add(this.bbtnclose);
             this.Controls.Add(this.bbtnprint);
             this.Controls.Add(this.bbtndelete);
             this.Controls.Add(this.panel1);
@@ -152,5 +163,6 @@
         private System.Windows.Forms.TextBox ctxtaddress;
         private System.Windows.Forms.TextBox ctxtphone;
         private System.Windows.Forms.TextBox ctxtname;
+        private System.Windows.Forms.Button bbtnclose;
     }
 }

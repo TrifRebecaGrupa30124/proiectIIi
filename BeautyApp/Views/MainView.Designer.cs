@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCustomers = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnPets = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnbasket = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnbasket);
             this.panel1.Controls.Add(this.btnCustomers);
             this.panel1.Controls.Add(this.buttonLogOut);
             this.panel1.Controls.Add(this.btnEmployee);
@@ -51,18 +53,27 @@
             this.panel1.Size = new System.Drawing.Size(361, 716);
             this.panel1.TabIndex = 0;
             // 
+            // btnCustomers
+            // 
+            this.btnCustomers.Location = new System.Drawing.Point(23, 314);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Size = new System.Drawing.Size(313, 119);
+            this.btnCustomers.TabIndex = 3;
+            this.btnCustomers.Text = "Customers";
+            this.btnCustomers.UseVisualStyleBackColor = true;
+            // 
             // buttonLogOut
             // 
-            this.buttonLogOut.Location = new System.Drawing.Point(12, 556);
+            this.buttonLogOut.Location = new System.Drawing.Point(23, 550);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(208, 102);
+            this.buttonLogOut.Size = new System.Drawing.Size(313, 102);
             this.buttonLogOut.TabIndex = 2;
             this.buttonLogOut.Text = "Log Out";
             this.buttonLogOut.UseVisualStyleBackColor = true;
             // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(12, 311);
+            this.btnEmployee.Location = new System.Drawing.Point(23, 180);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(313, 119);
             this.btnEmployee.TabIndex = 1;
@@ -71,7 +82,7 @@
             // 
             // btnPets
             // 
-            this.btnPets.Location = new System.Drawing.Point(12, 169);
+            this.btnPets.Location = new System.Drawing.Point(23, 78);
             this.btnPets.Name = "btnPets";
             this.btnPets.Size = new System.Drawing.Size(313, 87);
             this.btnPets.TabIndex = 0;
@@ -96,14 +107,14 @@
             this.buttonCancel.Text = "button1";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // btnCustomers
+            // btnbasket
             // 
-            this.btnCustomers.Location = new System.Drawing.Point(12, 431);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(313, 119);
-            this.btnCustomers.TabIndex = 3;
-            this.btnCustomers.Text = "Customers";
-            this.btnCustomers.UseVisualStyleBackColor = true;
+            this.btnbasket.Location = new System.Drawing.Point(23, 449);
+            this.btnbasket.Name = "btnbasket";
+            this.btnbasket.Size = new System.Drawing.Size(313, 95);
+            this.btnbasket.TabIndex = 4;
+            this.btnbasket.Text = "basket";
+            this.btnbasket.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
@@ -130,5 +141,6 @@
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.Button btnbasket;
     }
 }

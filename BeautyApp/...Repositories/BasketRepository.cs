@@ -24,7 +24,7 @@ namespace BeautyApp.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "Select *from Product order by Product_Id desc";
+                command.CommandText = "Select *from Basket order by Product_Id desc";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -47,7 +47,7 @@ namespace BeautyApp.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "insert into Basket values (@name, @description, @price,@ammount)";
+                command.CommandText = "insert into Basket values (@name, @price)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
                 command.ExecuteNonQuery();

@@ -70,6 +70,7 @@
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\ModelLogIn.cs" />
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Presenters\BasketPresenter.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
     <Compile Include="Presenters\CustomerPresenter.cs" />
     <Compile Include="Presenters\EmployeePresenter.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Views\EmployeeView.Designer.cs">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IBasketView.cs" />
     <Compile Include="Views\ICustomerView.cs" />
     <Compile Include="Views\IEmployeeView.cs" />
     <Compile Include="Views\ILogInView.cs" />

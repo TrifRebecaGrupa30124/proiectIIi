@@ -25,6 +25,7 @@ namespace BeautyApp.Presenters
             this.mainView.ShowProductView += ShowProductView;
             this.mainView.ShowEmployeeView += ShowEmployeeView;
             this.mainView.ShowCustomerView += ShowCustomerView;
+            this.mainView.ShowBasketView += ShowBasketView;
 
             this.mainView.LogOut += LogOutFunction;
 
@@ -66,6 +67,16 @@ namespace BeautyApp.Presenters
             ICustomerView view = CustomerView.GetInstance((MainView)mainView);
             ICustomerRepository repository = new CustomerRepository(sqlConnectionString);
             new CustomerPresenter(view, repository);
+        }
+        private void ShowBasketView(object sender, EventArgs e)
+        {
+            IBasketView view = BasketView.GetInstance((MainView)mainView);
+            IBasketRepository repository = new BasketRepository(sqlConnectionString);
+            IProductView pview = ProductView.GetInstance((MainView)mainView);
+            IProductRepository prepository = new ProductRepository(sqlConnectionString);
+            ICustomerView cview = CustomerView.GetInstance((MainView)mainView);
+            ICustomerRepository crepository = new CustomerRepository(sqlConnectionString);
+            new BasketPresenter(view, repository,pview,prepository,cview,crepository);
         }
     }
 }
