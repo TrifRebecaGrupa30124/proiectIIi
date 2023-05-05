@@ -12,9 +12,8 @@ namespace BeautyApp.Models
     {
         private int id;
         private string name;
-        private string description;
         private string price;
-        private string ammount;
+      
 
         //Properties - Validations
         [DisplayName("ID")]
@@ -31,14 +30,7 @@ namespace BeautyApp.Models
             get { return name; }
             set { name = value; }
         }
-        [DisplayName("Description")]
-        [Required(ErrorMessage = "Product description is requerid")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Product description must be between 3 and 50 characters")]
-        public string Description
-        {
-            get { return description; }
-            set { description = value; }
-        }
+       
         [DisplayName("Price")]
         [Required(ErrorMessage = "Product price is requerid")]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Product price must be between 3 and 50 characters")]
@@ -47,13 +39,6 @@ namespace BeautyApp.Models
             get { return price; }
             set { price = value; }
         }
-        [DisplayName("Ammount")]
-        [Required(ErrorMessage = "Product ammount is requerid")]
-        [StringLength(50, MinimumLength = 1, ErrorMessage = "Product ammount must be between 3 and 50 characters")]
-        public string Ammount
-        {
-            get { return ammount; }
-            set { ammount = value; }
-        }
+        
     }
 }

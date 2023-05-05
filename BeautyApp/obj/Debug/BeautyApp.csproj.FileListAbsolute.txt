@@ -38,3 +38,4 @@ D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.GenerateResourc
 D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.CoreCompileInputs.cache
 D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.exe
 D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.pdb
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.BasketView.resources

@@ -8,8 +8,7 @@ namespace BeautyApp.Models
 {
     interface IBasketRepository
     {
-        void Add(BasketModel productModel);
-        void Edit(BasketModel productModel);
+        void Add(BasketModel productModel);     
         void Delete(int id);
         IEnumerable<BasketModel> GetAll();
       

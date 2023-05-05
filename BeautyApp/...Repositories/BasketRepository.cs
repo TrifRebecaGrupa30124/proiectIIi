@@ -32,9 +32,7 @@ namespace BeautyApp.Repositories
                         var productModel = new BasketModel();
                         productModel.Id = (int)reader[0];
                         productModel.Name = reader[1].ToString();
-                        productModel.Description = reader[2].ToString();
                         productModel.Price = reader[3].ToString();
-                        productModel.Ammount = reader[4].ToString();
                         productList.Add(productModel);
                     }
                 }
@@ -51,9 +49,7 @@ namespace BeautyApp.Repositories
                 command.Connection = connection;
                 command.CommandText = "insert into Basket values (@name, @description, @price,@ammount)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
-                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
                 command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
-                command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = productModel.Ammount;
                 command.ExecuteNonQuery();
             }
         }
@@ -69,23 +65,6 @@ namespace BeautyApp.Repositories
                 command.ExecuteNonQuery();
             }
         }
-        public void Edit(BasketModel productModel)
-        {
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = @"update Basket 
-                                    set Product_Name=@name,Product_Descriere= @description,Product_Pret= @price,Product_Cantitate= @ammount
-                                    where Product_Id=@id";
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
-                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
-                command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
-                command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = productModel.Ammount;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = productModel.Id;
-                command.ExecuteNonQuery();
-            }
-        }
+        
     }
 }
