@@ -32,6 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControlPet = new System.Windows.Forms.TabControl();
             this.tabPagePetList = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -51,13 +52,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControlPet.SuspendLayout();
             this.tabPagePetList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPagePetDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,6 +106,14 @@
             this.tabPagePetList.TabIndex = 0;
             this.tabPagePetList.Text = "See Products List";
             this.tabPagePetList.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(769, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 170);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // btnDelete
             // 
@@ -161,6 +171,7 @@
             // 
             // tabPagePetDetail
             // 
+            this.tabPagePetDetail.Controls.Add(this.pictureBox2);
             this.tabPagePetDetail.Controls.Add(this.btnCancel);
             this.tabPagePetDetail.Controls.Add(this.btnSave);
             this.tabPagePetDetail.Controls.Add(this.textProductAmmount);
@@ -176,7 +187,7 @@
             this.tabPagePetDetail.Location = new System.Drawing.Point(4, 25);
             this.tabPagePetDetail.Name = "tabPagePetDetail";
             this.tabPagePetDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePetDetail.Size = new System.Drawing.Size(1071, 544);
+            this.tabPagePetDetail.Size = new System.Drawing.Size(1215, 586);
             this.tabPagePetDetail.TabIndex = 1;
             this.tabPagePetDetail.Text = "Modify Products List";
             this.tabPagePetDetail.UseVisualStyleBackColor = true;
@@ -281,13 +292,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(769, 132);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 170);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.DeepPink;
+            this.pictureBox2.Location = new System.Drawing.Point(640, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(293, 317);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // ProductView
             // 
@@ -302,10 +314,11 @@
             this.tabControlPet.ResumeLayout(false);
             this.tabPagePetList.ResumeLayout(false);
             this.tabPagePetList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabPagePetDetail.ResumeLayout(false);
             this.tabPagePetDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +349,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -24,3 +24,17 @@ C:\Users\mirun\Documents\Proiect II\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csp
 C:\Users\mirun\Documents\Proiect II\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.CoreCompileInputs.cache
 C:\Users\mirun\Documents\Proiect II\proiectIIi\BeautyApp\obj\Debug\BeautyApp.exe
 C:\Users\mirun\Documents\Proiect II\proiectIIi\BeautyApp\obj\Debug\BeautyApp.pdb
+D:\ii\proiectIIi\proiectIIi\BeautyApp\bin\Debug\BeautyApp.exe.config
+D:\ii\proiectIIi\proiectIIi\BeautyApp\bin\Debug\BeautyApp.exe
+D:\ii\proiectIIi\proiectIIi\BeautyApp\bin\Debug\BeautyApp.pdb
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csprojAssemblyReference.cache
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Properties.Resources.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.CustomerView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.EmployeeView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.LogInView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.MainView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.ProductView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.GenerateResource.cache
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.CoreCompileInputs.cache
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.exe
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.pdb

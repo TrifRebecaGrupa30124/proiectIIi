@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="...Repositories\BaseRepository.cs" />
     <Compile Include="...Repositories\BasketRepository.cs" />
+    <Compile Include="...Repositories\CustomerRepository.cs" />
     <Compile Include="...Repositories\EmployeeRepository.cs" />
     <Compile Include="...Repositories\LogInRepository.cs" />
     <Compile Include="...Repositories\ProductRepository.cs" />
@@ -60,26 +61,36 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BasketModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\IBasketRepository.cs" />
+    <Compile Include="Models\ICustomerRepository.cs" />
     <Compile Include="Models\IEmployeeRepository.cs" />
     <Compile Include="Models\ILogInRepository.cs" />
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\ModelLogIn.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
+    <Compile Include="Presenters\CustomerPresenter.cs" />
     <Compile Include="Presenters\EmployeePresenter.cs" />
     <Compile Include="Presenters\LogInPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmployeeView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EmployeeView.Designer.cs">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ICustomerView.cs" />
     <Compile Include="Views\IEmployeeView.cs" />
     <Compile Include="Views\ILogInView.cs" />
     <Compile Include="Views\IMainView.cs" />
@@ -111,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </EmbeddedResource>

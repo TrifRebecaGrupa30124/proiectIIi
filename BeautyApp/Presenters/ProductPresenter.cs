@@ -3,8 +3,10 @@ using BeautyApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +19,8 @@ namespace BeautyApp.Presenters
         private IProductRepository repository;
         private BindingSource productBindingSource;
         private IEnumerable<ProductModel> productList;
-        
+        private String fname = "";
+
         //Constructor
         public ProductPresenter(IProductView view, IProductRepository repository)
         {
@@ -32,6 +35,7 @@ namespace BeautyApp.Presenters
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
             this.view.CurrentEvent += CurrentProduct;
+            this.view.SelectImageEvent += SelectImageProduct;
             //Set pets bindind source
             this.view.SetProductListBindingSource(productBindingSource);
 
@@ -43,12 +47,12 @@ namespace BeautyApp.Presenters
         //Methods
         private void LoadAllProductList()
         {
-           
-            
-           
+
+
+
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;//Set data source.
-            
+
         }
         private void SearchProduct(object sender, EventArgs e)
         {
@@ -64,10 +68,31 @@ namespace BeautyApp.Presenters
         }
         private void CurrentProduct(object sender, EventArgs e)
         {
-            var product = productBindingSource.Current.ToString();
-            view.ProductImage = new Bitmap("Images/untitled1.jpg");
-            view.ProductAmmount = productBindingSource.Current.ToString();
+            var product = (ProductModel)productBindingSource.Current;
 
+            view.ProductImage = new Bitmap("Images/" + product.Name + ".jpeg");
+
+        }
+
+        private void SelectImageProduct(object sender, EventArgs e)
+        {
+            Thread t = new Thread((ThreadStart)(() => {
+                OpenFileDialog fd1 = new OpenFileDialog();
+
+                if (fd1.ShowDialog().Equals(DialogResult.OK))
+                {
+                    fname = fd1.FileName;
+                }
+            }));
+
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+            t.Join();
+            File.Move(fname, "Images/" + view.ProductName_ + ".jpeg");
+            /* String dest = "Images/" + view.ProductName_ + "1" + ".jpeg";
+             System.IO.File.Copy(fname, dest);
+             view.SelectProductImage = new Bitmap(dest);
+             if (view.IsSuccessful == true) File.Delete(dest);*/
         }
         private void SaveProduct(object sender, EventArgs e)
         {
@@ -77,7 +102,7 @@ namespace BeautyApp.Presenters
             model.Description = view.ProductDescription;
             model.Price = view.ProductPrice;
             model.Ammount = view.ProductAmmount;
-          
+
             try
             {
                 new Common.ModelDataValidation().Validate(model);
@@ -133,7 +158,7 @@ namespace BeautyApp.Presenters
             view.ProductDescription = product.Description;
             view.ProductPrice = product.Price;
             view.ProductAmmount = product.Ammount;
-            
+
             view.IsEdit = true;
         }
         private void AddNewProduct(object sender, EventArgs e)
@@ -142,3 +167,4 @@ namespace BeautyApp.Presenters
         }
     }
 }
+

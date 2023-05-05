@@ -17,6 +17,7 @@ namespace BeautyApp.Views
             InitializeComponent();
             btnPets.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             btnEmployee.Click += delegate { ShowEmployeeView?.Invoke(this, EventArgs.Empty); };
+            btnCustomers.Click += delegate { ShowCustomerView?.Invoke(this, EventArgs.Empty); };
             buttonLogOut.Click += delegate {
                 this.Close();
                 LogOut?.Invoke(this, EventArgs.Empty); };
@@ -24,6 +25,7 @@ namespace BeautyApp.Views
         }
         public event EventHandler ShowProductView;
         public event EventHandler ShowEmployeeView;
+        public event EventHandler ShowCustomerView;
         public event EventHandler LogOut;
         //public event EventHandler ShowVetsView;
     }

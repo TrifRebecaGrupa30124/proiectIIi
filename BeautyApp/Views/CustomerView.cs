@@ -10,71 +10,70 @@ using System.Windows.Forms;
 
 namespace BeautyApp.Views
 {
-    public partial class ProductView : Form, IProductView
+    public partial class CustomerView : Form, ICustomerView
     {
         //Fields
         private string message;
         private bool isSuccessful;
         private bool isEdit;
         //Constructor
-        public ProductView()
+        public CustomerView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
-            tabControlPet.TabPages.Remove(tabPagePetDetail);
-            btnClose.Click += delegate { this.Close(); };
+            tabControlCustomer.TabPages.Remove(tabPageCustomerDetail);
+            cbtnclose.Click += delegate { this.Close(); };
 
 
 
         }
         private void AssociateAndRaiseViewEvents()
         {
-            btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            txtSearch.KeyDown += (s, e) =>
+            cbtnsearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            ctxtsearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             //Others
             //Add new
-            pictureBox2.Click += delegate { SelectImageEvent?.Invoke(this, EventArgs.Empty); };
-            dataGridView.Click += delegate { CurrentEvent?.Invoke(this, EventArgs.Empty); };
-            btnAddNew.Click += delegate
+
+            cbtnadd.Click += delegate
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
-                tabControlPet.TabPages.Remove(tabPagePetList);
-                tabControlPet.TabPages.Add(tabPagePetDetail);
-                tabPagePetDetail.Text = "Add new product";
+                tabControlCustomer.TabPages.Remove(tabPageCustomerList);
+                tabControlCustomer.TabPages.Add(tabPageCustomerDetail);
+                tabPageCustomerDetail.Text = "Add new customer";
             };
             //Edit
-            btnEdit.Click += delegate
+            cbtnedit.Click += delegate
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
-                tabControlPet.TabPages.Remove(tabPagePetList);
-                tabControlPet.TabPages.Add(tabPagePetDetail);
-                tabPagePetDetail.Text = "Edit product";
+                tabControlCustomer.TabPages.Remove(tabPageCustomerList);
+                tabControlCustomer.TabPages.Add(tabPageCustomerDetail);
+                tabPageCustomerDetail.Text = "Edit customer";
             };
             //Save changes
-            btnSave.Click += delegate
+            cbtnsave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (isSuccessful)
                 {
-                    tabControlPet.TabPages.Remove(tabPagePetDetail);
-                    tabControlPet.TabPages.Add(tabPagePetList);
+                    tabControlCustomer.TabPages.Remove(tabPageCustomerDetail);
+                    tabControlCustomer.TabPages.Add(tabPageCustomerList);
                 }
                 MessageBox.Show(Message);
             };
             //Cancel
-            btnCancel.Click += delegate
+            cbtncancel.Click += delegate
             {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
-                tabControlPet.TabPages.Remove(tabPagePetDetail);
-                tabControlPet.TabPages.Add(tabPagePetList);
+                tabControlCustomer.TabPages.Remove(tabPageCustomerDetail);
+                tabControlCustomer.TabPages.Add(tabPageCustomerList);
             };
-            btnDelete.Click += delegate
+            cbtndelete.Click += delegate
             {
-                var result = MessageBox.Show("Are you sure you want to delete the selected product?", "Warning",
+                var result = MessageBox.Show("Are you sure you want to delete the selected customer?", "Warning",
                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -84,36 +83,36 @@ namespace BeautyApp.Views
             };
         }
         //Properties
-        public string ProductId
+        public string CustomerId
         {
-            get { return txtProductId.Text; }
-            set { txtProductId.Text = value; }
+            get { return ctxtid.Text; }
+            set { ctxtid.Text = value; }
         }
 
-        public string ProductName_
+        public string CustomerName_
         {
-            get { return txtProductName.Text; }
-            set { txtProductName.Text = value; }
+            get { return ctxtname.Text; }
+            set { ctxtname.Text = value; }
         }
-        public string ProductDescription
+        public string CustomerEmail
         {
-            get { return txtProductDescription.Text; }
-            set { txtProductDescription.Text = value; }
+            get { return ctxtemail.Text; }
+            set { ctxtemail.Text = value; }
         }
-        public string ProductPrice
+        public string CustomerPhone
         {
-            get { return txtProductPrice.Text; }
-            set { txtProductPrice.Text = value; }
+            get { return ctxtphone.Text; }
+            set { ctxtphone.Text = value; }
         }
-        public string ProductAmmount////////////////////
+        public string CustomerAddress////////////////////
         {
-            get { return txtProductPrice.Text; }
-            set { textProductAmmount.Text = value; }
+            get { return ctxtaddress.Text; }
+            set { ctxtaddress.Text = value; }
         }
         public string SearchValue
         {
-            get { return txtSearch.Text; }
-            set { txtSearch.Text = value; }
+            get { return ctxtsearch.Text; }
+            set { ctxtsearch.Text = value; }
         }
         public bool IsEdit
         {
@@ -130,42 +129,16 @@ namespace BeautyApp.Views
             get { return message; }
             set { message = value; }
         }
-        public Bitmap ProductImage
-        {
-            get
-            {
-                return new Bitmap(pictureBox1.Image);
-
-            }
-            set
-            {
-                pictureBox1.Image = value;
-
-            }
-        }
-        public Bitmap SelectProductImage
-        {
-            get
-            {
-                return new Bitmap(pictureBox2.Image);
-
-            }
-            set
-            {
-                pictureBox2.Image = value;
-
-            }
-        }
+      
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
-        public event EventHandler CurrentEvent;
-        public event EventHandler SelectImageEvent;
+  
         //Methods
-        public void SetProductListBindingSource(BindingSource petList)
+        public void SetProductListBindingSource(BindingSource customerList)
         {
 
 
@@ -174,7 +147,7 @@ namespace BeautyApp.Views
              imgCol.Image = new Bitmap(imageP);
 
              dataGridView.Columns.Add(imgCol);*/
-            dataGridView.DataSource = petList;
+            dataGridView1.DataSource = customerList;
 
 
 
@@ -184,12 +157,12 @@ namespace BeautyApp.Views
 
         }
 
-        private static ProductView instance;
-        public static ProductView GetInstance(Form parentContainer)
+        private static CustomerView instance;
+        public static CustomerView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new ProductView();
+                instance = new CustomerView();
                 instance.MdiParent = parentContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
@@ -203,4 +176,3 @@ namespace BeautyApp.Views
         }
     }
 }
-

@@ -8,21 +8,18 @@ using System.Windows.Forms;
 
 namespace BeautyApp.Views
 {
-    public interface IProductView
+    interface ICustomerView
     {
+        string CustomerId { get; set; }
 
-        string ProductId { get; set; }
-
-        string ProductName_ { get; set; }
-        string ProductDescription { get; set; }
-        string ProductPrice { get; set; }
-        string ProductAmmount { get; set; }
+        string CustomerName_ { get; set; }
+        string CustomerEmail { get; set; }
+        string CustomerPhone { get; set; }
+        string CustomerAddress { get; set; }
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }
-        Bitmap ProductImage { get; set; }
-        Bitmap SelectProductImage { get; set; }
         //Events
         event EventHandler SearchEvent;
         event EventHandler AddNewEvent;
@@ -30,10 +27,8 @@ namespace BeautyApp.Views
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
-        event EventHandler CurrentEvent;
-        event EventHandler SelectImageEvent;
         //Methods
-        void SetProductListBindingSource(BindingSource productList);
+        void SetProductListBindingSource(BindingSource customerList);
         void Show();
     }
 }

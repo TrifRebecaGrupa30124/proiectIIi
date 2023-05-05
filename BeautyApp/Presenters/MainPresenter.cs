@@ -24,6 +24,8 @@ namespace BeautyApp.Presenters
             this.sqlConnectionString = sqlConnectionString;
             this.mainView.ShowProductView += ShowProductView;
             this.mainView.ShowEmployeeView += ShowEmployeeView;
+            this.mainView.ShowCustomerView += ShowCustomerView;
+
             this.mainView.LogOut += LogOutFunction;
 
         }
@@ -58,6 +60,12 @@ namespace BeautyApp.Presenters
             IEmployeeRepository repository = new EmployeeRepository(sqlConnectionString);
             new EmployeePresenter(view, repository);
 
+        }
+        private void ShowCustomerView(object sender, EventArgs e)
+        {
+            ICustomerView view = CustomerView.GetInstance((MainView)mainView);
+            ICustomerRepository repository = new CustomerRepository(sqlConnectionString);
+            new CustomerPresenter(view, repository);
         }
     }
 }
