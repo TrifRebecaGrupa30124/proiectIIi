@@ -121,17 +121,20 @@
   <data name="empl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\empl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="products" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\products.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="product" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="80929972-shopping-cart-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\80929972-shopping-cart-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cust" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\cust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="firstpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\firstpage.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255662629-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255662629-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="products" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\products.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white-welcome-word-text-illustration-free-png-11638786220mheuchi3nf-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\white-welcome-word-text-illustration-free-png-11638786220mheuchi3nf-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="disconnect-icon-logout-sign-icon-interface-icon-u9vq3TKg-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\disconnect-icon-logout-sign-icon-interface-icon-u9vq3TKg-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,16 +142,28 @@
   <data name="Capture-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\Capture-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lovepik-professionals-png-image_401864255_wh1200-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\lovepik-professionals-png-image_401864255_wh1200-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\cust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="product" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Image-Package3-sm-1017x800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\Image-Package3-sm-1017x800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="basket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\basket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="set-people-shopping-people-with-shopping-bags-vector-illustration_77417-2885-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\set-people-shopping-people-with-shopping-bags-vector-illustration_77417-2885-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Images\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="firstpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\firstpage.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255662629-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255662629-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="customer-base-marketing-2-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Images\customer-base-marketing-2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

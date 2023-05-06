@@ -178,5 +178,26 @@ namespace BeautyApp.Views
             }
             return instance;
         }
+        void StyleDataGridview()
+        {
+            edataGridView.BorderStyle = BorderStyle.None;
+            edataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            edataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            edataGridView.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            edataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            edataGridView.BackgroundColor = Color.White;
+            edataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            edataGridView.EnableHeadersVisualStyles = false;
+            edataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            edataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            edataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepPink;
+            edataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+        }
+        private void EmployeeView_Load(object sender, EventArgs e)
+        {
+            StyleDataGridview();
+        }
+
     }
 }

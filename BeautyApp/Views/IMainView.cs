@@ -13,7 +13,6 @@ namespace BeautyApp.Views
         event EventHandler ShowCustomerView;
         event EventHandler ShowBasketView;
         event EventHandler ShowHomeView;
-
         event EventHandler LogOut;
     }
 }

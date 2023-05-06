@@ -15,6 +15,10 @@ namespace BeautyApp.Views
         public HomeView()
         {
             InitializeComponent();
+            label1.Parent = pictureBox1;
+            label1.BackColor = Color.Transparent;
+            label2.Parent = pictureBox1;
+            label2.BackColor = Color.Transparent;
         }
         private static HomeView instance;
         public static HomeView GetInstance(Form parentContainer)
@@ -32,6 +36,11 @@ namespace BeautyApp.Views
                 instance.BringToFront();
             }
             return instance;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

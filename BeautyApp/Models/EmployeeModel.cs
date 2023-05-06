@@ -83,9 +83,9 @@ namespace BeautyApp.Models
             get { return phone; }
             set { phone = value; }
         }
-        [DisplayName("Name")]
-        [Required(ErrorMessage = "Employee name is requerid")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Employee name must be between 3 and 50 characters")]
+        [DisplayName("Birth-Date")]
+        [Required(ErrorMessage = "Employee birthDate is requerid")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Employee birthDate must be between 3 and 50 characters")]
         public string BirthDate_
         {
             get { return birth_date; }

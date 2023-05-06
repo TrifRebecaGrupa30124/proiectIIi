@@ -104,6 +104,16 @@ namespace BeautyApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_base_marketing_2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("customer-base-marketing-2-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disconnect_icon_logout_sign_icon_interface_icon_u9vq3TKg_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("disconnect-icon-logout-sign-icon-interface-icon-u9vq3TKg-removebg-preview", resourceCulture);
@@ -134,9 +144,29 @@ namespace BeautyApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Image_Package3_sm_1017x800 {
+            get {
+                object obj = ResourceManager.GetObject("Image-Package3-sm-1017x800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lovepik_professionals_png_image_401864255_wh1200_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("lovepik-professionals-png-image_401864255_wh1200-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -164,10 +194,32 @@ namespace BeautyApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap set_people_shopping_people_with_shopping_bags_vector_illustration_77417_2885_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("set-people-shopping-people-with-shopping-bags-vector-illustration_77417-2885-remo" +
+                        "vebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transparent_beauty_icon_lipstick_icon_makeup_icon_6004c5fe402d05_9251278616109255662629_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255" +
                         "662629-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_welcome_word_text_illustration_free_png_11638786220mheuchi3nf_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("white-welcome-word-text-illustration-free-png-11638786220mheuchi3nf-removebg-prev" +
+                        "iew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

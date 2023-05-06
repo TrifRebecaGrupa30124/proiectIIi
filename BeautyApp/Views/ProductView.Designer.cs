@@ -40,6 +40,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.tabPagePetDetail = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.textProductAmmount = new System.Windows.Forms.TextBox();
@@ -52,7 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.tabControlPet.SuspendLayout();
             this.tabPagePetList.SuspendLayout();
@@ -64,6 +66,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -73,25 +76,31 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(862, 41);
+            this.btnClose.BackColor = System.Drawing.Color.DeepPink;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.Location = new System.Drawing.Point(1113, 12);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(107, 34);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // tabControlPet
             // 
             this.tabControlPet.Controls.Add(this.tabPagePetList);
             this.tabControlPet.Controls.Add(this.tabPagePetDetail);
+            this.tabControlPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlPet.Location = new System.Drawing.Point(0, 95);
             this.tabControlPet.Name = "tabControlPet";
             this.tabControlPet.SelectedIndex = 0;
-            this.tabControlPet.Size = new System.Drawing.Size(1223, 615);
+            this.tabControlPet.Size = new System.Drawing.Size(1223, 644);
             this.tabControlPet.TabIndex = 1;
             // 
             // tabPagePetList
             // 
+            this.tabPagePetList.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPagePetList.Controls.Add(this.pictureBox1);
             this.tabPagePetList.Controls.Add(this.btnDelete);
             this.tabPagePetList.Controls.Add(this.txtSearch);
@@ -99,78 +108,82 @@
             this.tabPagePetList.Controls.Add(this.dataGridView);
             this.tabPagePetList.Controls.Add(this.btnSearch);
             this.tabPagePetList.Controls.Add(this.btnAddNew);
-            this.tabPagePetList.Location = new System.Drawing.Point(4, 25);
+            this.tabPagePetList.Location = new System.Drawing.Point(4, 31);
             this.tabPagePetList.Name = "tabPagePetList";
             this.tabPagePetList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePetList.Size = new System.Drawing.Size(1215, 586);
+            this.tabPagePetList.Size = new System.Drawing.Size(1215, 609);
             this.tabPagePetList.TabIndex = 0;
             this.tabPagePetList.Text = "See Products List";
-            this.tabPagePetList.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(769, 132);
+            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.Location = new System.Drawing.Point(879, 152);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 269);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(464, 423);
+            this.btnDelete.Location = new System.Drawing.Point(671, 524);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(100, 44);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(8, 46);
+            this.txtSearch.Location = new System.Drawing.Point(52, 38);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(487, 22);
+            this.txtSearch.Size = new System.Drawing.Size(615, 28);
             this.txtSearch.TabIndex = 2;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(306, 423);
+            this.btnEdit.Location = new System.Drawing.Point(381, 524);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(110, 45);
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // dataGridView
             // 
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(8, 86);
+            this.dataGridView.Location = new System.Drawing.Point(52, 104);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 75;
             this.dataGridView.RowTemplate.Height = 140;
             this.dataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView.Size = new System.Drawing.Size(664, 312);
+            this.dataGridView.Size = new System.Drawing.Size(794, 388);
             this.dataGridView.TabIndex = 3;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(548, 36);
+            this.btnSearch.Location = new System.Drawing.Point(748, 38);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(92, 33);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(154, 423);
+            this.btnAddNew.Location = new System.Drawing.Point(109, 523);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNew.Size = new System.Drawing.Size(99, 45);
             this.btnAddNew.TabIndex = 6;
             this.btnAddNew.Text = "Add";
             this.btnAddNew.UseVisualStyleBackColor = true;
             // 
             // tabPagePetDetail
             // 
+            this.tabPagePetDetail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPagePetDetail.Controls.Add(this.label6);
             this.tabPagePetDetail.Controls.Add(this.pictureBox2);
             this.tabPagePetDetail.Controls.Add(this.btnCancel);
             this.tabPagePetDetail.Controls.Add(this.btnSave);
@@ -184,132 +197,148 @@
             this.tabPagePetDetail.Controls.Add(this.label3);
             this.tabPagePetDetail.Controls.Add(this.label2);
             this.tabPagePetDetail.Controls.Add(this.label1);
-            this.tabPagePetDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPagePetDetail.Location = new System.Drawing.Point(4, 31);
             this.tabPagePetDetail.Name = "tabPagePetDetail";
             this.tabPagePetDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePetDetail.Size = new System.Drawing.Size(1215, 586);
+            this.tabPagePetDetail.Size = new System.Drawing.Size(1215, 609);
             this.tabPagePetDetail.TabIndex = 1;
             this.tabPagePetDetail.Text = "Modify Products List";
-            this.tabPagePetDetail.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(696, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(377, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "*Click and Choose a photo for your product*";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Pink;
+            this.pictureBox2.Location = new System.Drawing.Point(657, 91);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(449, 374);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(420, 378);
+            this.btnCancel.Location = new System.Drawing.Point(970, 508);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(103, 34);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(139, 378);
+            this.btnSave.Location = new System.Drawing.Point(700, 508);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(103, 34);
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // textProductAmmount
             // 
-            this.textProductAmmount.Location = new System.Drawing.Point(387, 259);
+            this.textProductAmmount.Location = new System.Drawing.Point(352, 298);
             this.textProductAmmount.Name = "textProductAmmount";
-            this.textProductAmmount.Size = new System.Drawing.Size(100, 22);
+            this.textProductAmmount.Size = new System.Drawing.Size(176, 28);
             this.textProductAmmount.TabIndex = 9;
             // 
             // txtProductDescription
             // 
-            this.txtProductDescription.Location = new System.Drawing.Point(387, 159);
+            this.txtProductDescription.Location = new System.Drawing.Point(352, 378);
+            this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(100, 22);
+            this.txtProductDescription.Size = new System.Drawing.Size(176, 109);
             this.txtProductDescription.TabIndex = 8;
             // 
             // txtProductPrice
             // 
-            this.txtProductPrice.Location = new System.Drawing.Point(114, 292);
+            this.txtProductPrice.Location = new System.Drawing.Point(352, 239);
             this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(100, 22);
+            this.txtProductPrice.Size = new System.Drawing.Size(176, 28);
             this.txtProductPrice.TabIndex = 7;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(114, 181);
+            this.txtProductName.Location = new System.Drawing.Point(352, 182);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(100, 22);
+            this.txtProductName.Size = new System.Drawing.Size(176, 28);
             this.txtProductName.TabIndex = 6;
             // 
             // txtProductId
             // 
-            this.txtProductId.Location = new System.Drawing.Point(114, 70);
+            this.txtProductId.Location = new System.Drawing.Point(352, 116);
             this.txtProductId.Name = "txtProductId";
             this.txtProductId.ReadOnly = true;
-            this.txtProductId.Size = new System.Drawing.Size(100, 22);
+            this.txtProductId.Size = new System.Drawing.Size(176, 28);
             this.txtProductId.TabIndex = 5;
             this.txtProductId.Text = "0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(398, 109);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(166, 378);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 17);
+            this.label5.Size = new System.Drawing.Size(104, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "Description";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(398, 212);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(166, 301);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(92, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ammount";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 244);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(166, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Price";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 122);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(166, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(61, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 39);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(166, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.Size = new System.Drawing.Size(25, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DeepPink;
-            this.pictureBox2.Location = new System.Drawing.Point(640, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(293, 317);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // ProductView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 709);
+            this.ClientSize = new System.Drawing.Size(1223, 737);
             this.Controls.Add(this.tabControlPet);
             this.Controls.Add(this.panel1);
             this.Name = "ProductView";
             this.Text = "ProductView";
+            this.Load += new System.EventHandler(this.ProductView_Load);
             this.panel1.ResumeLayout(false);
             this.tabControlPet.ResumeLayout(false);
             this.tabPagePetList.ResumeLayout(false);
@@ -350,5 +379,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label6;
     }
 }

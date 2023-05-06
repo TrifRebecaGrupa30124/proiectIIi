@@ -215,5 +215,28 @@ namespace BeautyApp.Views
             }
             return instance;
         }
+        void StyleDataGridview()
+        {
+            dataGridView.BorderStyle = BorderStyle.None;
+            dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            dataGridView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView.BackgroundColor = Color.White;
+            dataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView.EnableHeadersVisualStyles = false;
+            dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepPink;
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+        }
+
+
+
+        private void ProductView_Load(object sender, EventArgs e)
+        {
+            StyleDataGridview();
+        }
     }
 }
