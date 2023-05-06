@@ -74,6 +74,7 @@
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
     <Compile Include="Presenters\CustomerPresenter.cs" />
     <Compile Include="Presenters\EmployeePresenter.cs" />
+    <Compile Include="Presenters\HomePresenter.cs" />
     <Compile Include="Presenters\LogInPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Presenters\ProductPresenter.cs" />
@@ -97,9 +98,16 @@
     <Compile Include="Views\EmployeeView.Designer.cs">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\HomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\IBasketView.cs" />
     <Compile Include="Views\ICustomerView.cs" />
     <Compile Include="Views\IEmployeeView.cs" />
+    <Compile Include="Views\IHomeView.cs" />
     <Compile Include="Views\ILogInView.cs" />
     <Compile Include="Views\IMainView.cs" />
     <Compile Include="Views\IProductView.cs" />
@@ -139,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LogInView.resx">
       <DependentUpon>LogInView.cs</DependentUpon>

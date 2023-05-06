@@ -23,12 +23,16 @@ namespace BeautyApp.Views
                 this.Close();
                 LogOut?.Invoke(this, EventArgs.Empty); };
             buttonCancel.Click += delegate { this.Close(); };
+            this.Activated += delegate
+            {
+                ShowHomeView?.Invoke(this, EventArgs.Empty);
+            };
         }
         public event EventHandler ShowProductView;
         public event EventHandler ShowEmployeeView;
         public event EventHandler ShowCustomerView;
         public event EventHandler ShowBasketView;
-
+        public event EventHandler ShowHomeView;
         public event EventHandler LogOut;
 
        

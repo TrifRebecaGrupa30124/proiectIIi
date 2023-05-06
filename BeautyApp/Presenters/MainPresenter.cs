@@ -28,6 +28,7 @@ namespace BeautyApp.Presenters
             this.mainView.ShowBasketView += ShowBasketView;
 
             this.mainView.LogOut += LogOutFunction;
+            this.mainView.ShowHomeView += ShowHomeFunction;
 
         }
         private void LogOutFunction(object sender, EventArgs e)
@@ -37,6 +38,11 @@ namespace BeautyApp.Presenters
             th.Start();
            
             
+        }
+        private void ShowHomeFunction(object sender, EventArgs e)
+        {
+            IHomeView view = HomeView.GetInstance((MainView)mainView);
+            new HomePresenter(view);
         }
         private void tFunction(object obj)
         {
@@ -55,6 +61,7 @@ namespace BeautyApp.Presenters
             IProductRepository repository = new ProductRepository(sqlConnectionString);
             new ProductPresenter(view, repository);
         }
+       
         private void ShowEmployeeView(object sender, EventArgs e)
         {
             IEmployeeView view = EmployeeView.GetInstance((MainView)mainView);

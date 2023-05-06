@@ -37,10 +37,11 @@ namespace BeautyApp.Views
             };
             //Others
             //Add new
-            pictureBox2.Click += delegate { SelectImageEvent?.Invoke(this, EventArgs.Empty); };
+
             dataGridView.Click += delegate { CurrentEvent?.Invoke(this, EventArgs.Empty); };
             btnAddNew.Click += delegate
             {
+                pictureBox2.Click += delegate { SelectImageEvent?.Invoke(this, EventArgs.Empty); };
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControlPet.TabPages.Remove(tabPagePetList);
                 tabControlPet.TabPages.Add(tabPagePetDetail);
@@ -143,6 +144,19 @@ namespace BeautyApp.Views
 
             }
         }
+        public Bitmap ProductImageModify
+        {
+            get
+            {
+                return new Bitmap(pictureBox2.Image);
+
+            }
+            set
+            {
+                pictureBox2.Image = value;
+
+            }
+        }
         public Bitmap SelectProductImage
         {
             get
@@ -203,4 +217,3 @@ namespace BeautyApp.Views
         }
     }
 }
-

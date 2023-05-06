@@ -22,6 +22,7 @@ namespace BeautyApp.Views
         bool IsSuccessful { get; set; }
         string Message { get; set; }
         Bitmap ProductImage { get; set; }
+        Bitmap ProductImageModify { get; set; }
         Bitmap SelectProductImage { get; set; }
         //Events
         event EventHandler SearchEvent;

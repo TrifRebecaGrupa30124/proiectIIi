@@ -111,7 +111,7 @@ namespace BeautyApp.Repositories
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"update Product 
-                                    set Product_Name=@name,Product_Descriere= @description,Product_Pret= @price,Product_Cantitate= @ammount
+                                    set Product_Name=@name,Product_Description= @description,Product_Price= @price,Product_Amount= @ammount
                                     where Product_Id=@id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;

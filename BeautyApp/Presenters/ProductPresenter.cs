@@ -20,6 +20,7 @@ namespace BeautyApp.Presenters
         private BindingSource productBindingSource;
         private IEnumerable<ProductModel> productList;
         private String fname = "";
+        private String beforeEdit;
 
         //Constructor
         public ProductPresenter(IProductView view, IProductRepository repository)
@@ -47,9 +48,6 @@ namespace BeautyApp.Presenters
         //Methods
         private void LoadAllProductList()
         {
-
-
-
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;//Set data source.
 
@@ -89,6 +87,7 @@ namespace BeautyApp.Presenters
             t.Start();
             t.Join();
             File.Move(fname, "Images/" + view.ProductName_ + ".png");
+
             /* String dest = "Images/" + view.ProductName_ + "1" + ".jpeg";
              System.IO.File.Copy(fname, dest);
              view.SelectProductImage = new Bitmap(dest);
@@ -102,13 +101,23 @@ namespace BeautyApp.Presenters
             model.Description = view.ProductDescription;
             model.Price = view.ProductPrice;
             model.Ammount = view.ProductAmmount;
-
+           
             try
             {
                 new Common.ModelDataValidation().Validate(model);
                 if (view.IsEdit)//Edit model
                 {
+                    if (!beforeEdit.Equals(model.Name))
+                    {
+
+                        File.Copy("Images/" + beforeEdit + ".png", "Images/" + view.ProductName_ + ".png");
+                        // File.Move("Images/", "Images/" + view.ProductName_ + ".png");
+
+                        // File.Delete("Images/" + beforeEdit + ".png");
+
+                    }
                     repository.Edit(model);
+
                     view.Message = "Product edited successfuly";
                 }
                 else //Add new model
@@ -140,11 +149,14 @@ namespace BeautyApp.Presenters
             {
                 var product = (ProductModel)productBindingSource.Current;
                 var nameFile = product.Name;
-                File.Delete("Images/" + nameFile + ".png");
+               // File.Delete("Images/" + nameFile + ".png");
                 repository.Delete(product.Id);
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully";
                 LoadAllProductList();
+                view.ProductImage.Dispose();
+                view.ProductImage = null;
+                
             }
             catch (Exception ex)
             {
@@ -160,7 +172,9 @@ namespace BeautyApp.Presenters
             view.ProductDescription = product.Description;
             view.ProductPrice = product.Price;
             view.ProductAmmount = product.Ammount;
+            beforeEdit = product.Name;
 
+            view.ProductImageModify = new Bitmap("Images/" + view.ProductName_ + ".png");
             view.IsEdit = true;
         }
         private void AddNewProduct(object sender, EventArgs e)
@@ -169,4 +183,3 @@ namespace BeautyApp.Presenters
         }
     }
 }
-
