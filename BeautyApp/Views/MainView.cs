@@ -30,6 +30,8 @@ namespace BeautyApp.Views
         public event EventHandler ShowBasketView;
 
         public event EventHandler LogOut;
+
+       
         //public event EventHandler ShowVetsView;
     }
 }

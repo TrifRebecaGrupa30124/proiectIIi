@@ -129,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\BasketView.resx">
       <DependentUpon>BasketView.cs</DependentUpon>
@@ -163,6 +164,39 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\firstpage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\cust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\empl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\80929972-shopping-cart-sign-vector-white-icon-with-soft-shadow-on-transparent-background-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Capture-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\disconnect-icon-logout-sign-icon-interface-icon-u9vq3TKg-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\transparent-beauty-icon-lipstick-icon-makeup-icon-6004c5fe402d05.9251278616109255662629-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
