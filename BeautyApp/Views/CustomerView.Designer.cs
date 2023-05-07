@@ -39,7 +39,10 @@
             this.cbtnsearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ctxtsearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPageCustomerDetail = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbtncancel = new System.Windows.Forms.Button();
             this.cbtnsave = new System.Windows.Forms.Button();
             this.ctxtaddress = new System.Windows.Forms.TextBox();
@@ -52,15 +55,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.tabControlCustomer.SuspendLayout();
             this.tabPageCustomerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPageCustomerDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPageCustomerDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.cbtnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbtnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtnclose.ForeColor = System.Drawing.Color.White;
-            this.cbtnclose.Location = new System.Drawing.Point(1113, 12);
+            this.cbtnclose.Location = new System.Drawing.Point(1061, 12);
             this.cbtnclose.Name = "cbtnclose";
             this.cbtnclose.Size = new System.Drawing.Size(105, 36);
             this.cbtnclose.TabIndex = 0;
@@ -121,7 +121,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(570, 39);
+            this.label10.Location = new System.Drawing.Point(542, 39);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(176, 38);
             this.label10.TabIndex = 12;
@@ -156,7 +156,7 @@
             // 
             // cbtnsearch
             // 
-            this.cbtnsearch.Location = new System.Drawing.Point(960, 93);
+            this.cbtnsearch.Location = new System.Drawing.Point(948, 93);
             this.cbtnsearch.Name = "cbtnsearch";
             this.cbtnsearch.Size = new System.Drawing.Size(95, 34);
             this.cbtnsearch.TabIndex = 5;
@@ -166,7 +166,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 147);
+            this.dataGridView1.Location = new System.Drawing.Point(235, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(808, 245);
@@ -174,10 +174,20 @@
             // 
             // ctxtsearch
             // 
-            this.ctxtsearch.Location = new System.Drawing.Point(357, 93);
+            this.ctxtsearch.Location = new System.Drawing.Point(336, 93);
             this.ctxtsearch.Name = "ctxtsearch";
             this.ctxtsearch.Size = new System.Drawing.Size(584, 28);
             this.ctxtsearch.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BeautyApp.Properties.Resources.set_people_shopping_people_with_shopping_bags_vector_illustration_77417_2885_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 352);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1185, 417);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPageCustomerDetail
             // 
@@ -202,6 +212,24 @@
             this.tabPageCustomerDetail.TabIndex = 1;
             this.tabPageCustomerDetail.Text = "Modify Customers";
             this.tabPageCustomerDetail.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BeautyApp.Properties.Resources.customer_base_marketing_2_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(680, 112);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(385, 335);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(680, 569);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(251, 51);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // cbtncancel
             // 
@@ -253,8 +281,10 @@
             // 
             this.ctxtid.Location = new System.Drawing.Point(453, 165);
             this.ctxtid.Name = "ctxtid";
+            this.ctxtid.ReadOnly = true;
             this.ctxtid.Size = new System.Drawing.Size(193, 28);
             this.ctxtid.TabIndex = 5;
+            this.ctxtid.Text = "0";
             // 
             // label5
             // 
@@ -301,34 +331,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BeautyApp.Properties.Resources.set_people_shopping_people_with_shopping_bags_vector_illustration_77417_2885_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 352);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1185, 417);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BeautyApp.Properties.Resources.customer_base_marketing_2_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(680, 112);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(385, 335);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(680, 569);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(251, 51);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,9 +346,9 @@
             this.tabPageCustomerList.ResumeLayout(false);
             this.tabPageCustomerList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPageCustomerDetail.ResumeLayout(false);
             this.tabPageCustomerDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

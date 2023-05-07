@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace BeautyApp.Models
         [DisplayName("Name")]
         [Required(ErrorMessage = "Product name is requerid")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Product name must be between 3 and 50 characters")]
+        [ForeignKey("ProductModel")]
         public string Name
         {
             get { return name; }

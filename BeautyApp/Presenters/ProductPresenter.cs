@@ -20,6 +20,7 @@ namespace BeautyApp.Presenters
         private BindingSource productBindingSource;
         private IEnumerable<ProductModel> productList;
         private String fname = "";
+        private String path = @"Images\";
         private String beforeEdit;
 
         //Constructor
@@ -48,6 +49,9 @@ namespace BeautyApp.Presenters
         //Methods
         private void LoadAllProductList()
         {
+
+
+
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;//Set data source.
 
@@ -68,7 +72,7 @@ namespace BeautyApp.Presenters
         {
             var product = (ProductModel)productBindingSource.Current;
 
-            view.ProductImage = new Bitmap("Images/" + product.Name + ".png");
+            view.ProductImage = new Bitmap(path + product.Name + ".png");
 
         }
 
@@ -86,7 +90,7 @@ namespace BeautyApp.Presenters
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            File.Move(fname, "Images/" + view.ProductName_ + ".png");
+            File.Move(fname, path + view.ProductName_ + ".png");
 
             /* String dest = "Images/" + view.ProductName_ + "1" + ".jpeg";
              System.IO.File.Copy(fname, dest);
@@ -97,26 +101,31 @@ namespace BeautyApp.Presenters
         {
             var model = new ProductModel();
             model.Id = Convert.ToInt32(view.ProductId);
+
             model.Name = view.ProductName_;
             model.Description = view.ProductDescription;
             model.Price = view.ProductPrice;
             model.Ammount = view.ProductAmmount;
-           
+
             try
             {
                 new Common.ModelDataValidation().Validate(model);
                 if (view.IsEdit)//Edit model
                 {
+                    repository.Edit(model);
                     if (!beforeEdit.Equals(model.Name))
                     {
 
-                        File.Copy("Images/" + beforeEdit + ".png", "Images/" + view.ProductName_ + ".png");
+                        File.Copy(path + beforeEdit + ".png", path + view.ProductName_ + ".png");
+
+                        //FileInfo file = new FileInfo(path + beforeEdit + ".png");
+                        //file.Delete();
                         // File.Move("Images/", "Images/" + view.ProductName_ + ".png");
 
                         // File.Delete("Images/" + beforeEdit + ".png");
 
                     }
-                    repository.Edit(model);
+
 
                     view.Message = "Product edited successfuly";
                 }
@@ -147,16 +156,24 @@ namespace BeautyApp.Presenters
         {
             try
             {
+
                 var product = (ProductModel)productBindingSource.Current;
                 var nameFile = product.Name;
-               // File.Delete("Images/" + nameFile + ".png");
+                // view.ProductImage.Dispose();
+                view.ProductImage = null;
+
+                //var l = nameFile.Length;
+                //File.Delete(path + nameFile.Substring(0, l-1) + ".png");
+
+                //FileInfo file = new FileInfo(path+nameFile.Substring(0, l - 1) + ".png");
+                //file.Delete();
                 repository.Delete(product.Id);
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully";
                 LoadAllProductList();
-                view.ProductImage.Dispose();
-                view.ProductImage = null;
-                
+
+
+
             }
             catch (Exception ex)
             {
@@ -174,7 +191,7 @@ namespace BeautyApp.Presenters
             view.ProductAmmount = product.Ammount;
             beforeEdit = product.Name;
 
-            view.ProductImageModify = new Bitmap("Images/" + view.ProductName_ + ".png");
+            view.ProductImageModify = new Bitmap(path + view.ProductName_ + ".png");
             view.IsEdit = true;
         }
         private void AddNewProduct(object sender, EventArgs e)

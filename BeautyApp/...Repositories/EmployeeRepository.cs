@@ -88,8 +88,7 @@ namespace BeautyApp.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "insert into Employees values (@id, @name, @jobname,@hiredate,@salary,@email,@sex,@phone,@birthdate)";
-                command.Parameters.Add("@id", SqlDbType.NVarChar).Value = employeeModel.Id;
+                command.CommandText = "insert into Employees values (@name, @jobname,@hiredate,@salary,@email,@sex,@phone,@birthdate)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = employeeModel.Name;
                 command.Parameters.Add("@jobname", SqlDbType.NVarChar).Value = employeeModel.JobName;
                 command.Parameters.Add("@hiredate", SqlDbType.NVarChar).Value = employeeModel.HireDate;
@@ -131,7 +130,7 @@ namespace BeautyApp.Repositories
                 command.Parameters.Add("@sex", SqlDbType.NVarChar).Value = employeeModel.Sex;
                 command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = employeeModel.Phone;
                 command.Parameters.Add("@birthdate", SqlDbType.NVarChar).Value = employeeModel.BirthDate_;
-
+                command.Parameters.Add("@id", SqlDbType.Int).Value = employeeModel.Id;
                 command.ExecuteNonQuery();
             }
         }

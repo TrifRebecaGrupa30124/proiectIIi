@@ -32,6 +32,7 @@
             this.ebtnclose = new System.Windows.Forms.Button();
             this.etabControl = new System.Windows.Forms.TabControl();
             this.etabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
             this.ebtndelete = new System.Windows.Forms.Button();
             this.ebtnedit = new System.Windows.Forms.Button();
             this.ebtnadd = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.etabControl.SuspendLayout();
             this.etabPage1.SuspendLayout();
@@ -84,7 +84,7 @@
             this.ebtnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ebtnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ebtnclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ebtnclose.Location = new System.Drawing.Point(1113, 29);
+            this.ebtnclose.Location = new System.Drawing.Point(1050, 21);
             this.ebtnclose.Name = "ebtnclose";
             this.ebtnclose.Size = new System.Drawing.Size(106, 33);
             this.ebtnclose.TabIndex = 0;
@@ -121,6 +121,16 @@
             this.etabPage1.TabIndex = 0;
             this.etabPage1.Text = "Show Employees";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(457, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(179, 38);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Employees";
+            // 
             // ebtndelete
             // 
             this.ebtndelete.Location = new System.Drawing.Point(803, 512);
@@ -150,7 +160,7 @@
             // 
             // ebtnsearch
             // 
-            this.ebtnsearch.Location = new System.Drawing.Point(857, 55);
+            this.ebtnsearch.Location = new System.Drawing.Point(803, 59);
             this.ebtnsearch.Name = "ebtnsearch";
             this.ebtnsearch.Size = new System.Drawing.Size(112, 36);
             this.ebtnsearch.TabIndex = 10;
@@ -160,15 +170,15 @@
             // edataGridView
             // 
             this.edataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.edataGridView.Location = new System.Drawing.Point(81, 138);
+            this.edataGridView.Location = new System.Drawing.Point(43, 139);
             this.edataGridView.Name = "edataGridView";
             this.edataGridView.RowTemplate.Height = 24;
-            this.edataGridView.Size = new System.Drawing.Size(1083, 335);
+            this.edataGridView.Size = new System.Drawing.Size(1040, 335);
             this.edataGridView.TabIndex = 7;
             // 
             // etxtsearch
             // 
-            this.etxtsearch.Location = new System.Drawing.Point(357, 59);
+            this.etxtsearch.Location = new System.Drawing.Point(299, 63);
             this.etxtsearch.Name = "etxtsearch";
             this.etxtsearch.Size = new System.Drawing.Size(470, 28);
             this.etxtsearch.TabIndex = 5;
@@ -377,16 +387,6 @@
             this.label1.Size = new System.Drawing.Size(25, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(519, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(186, 39);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Employees";
             // 
             // EmployeeView
             // 

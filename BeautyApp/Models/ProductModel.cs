@@ -37,7 +37,7 @@ namespace BeautyApp.Models
            
         [DisplayName("Description")]
         [Required(ErrorMessage = "Product description is requerid")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Product description must be between 3 and 50 characters")]
+        [StringLength(200, MinimumLength = 3, ErrorMessage = "Product description must be between 3 and 50 characters")]
         public string Description
         {
             get { return description; }

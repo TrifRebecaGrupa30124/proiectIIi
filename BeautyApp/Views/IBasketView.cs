@@ -7,20 +7,20 @@ using System.Windows.Forms;
 
 namespace BeautyApp.Views
 {
-     public interface IBasketView
+    public interface IBasketView
     {
-        //string ProductId { get; set; }
-      //  string ProductName_ { get; set; }
-       // string ProductPrice { get; set; }             
+        string CustomerName { get; set; }
+
+        string CustomerPhone { get; set; }
+        string CustomerAddress { get; set; }
         bool IsSuccessful { get; set; }
-        string Message { get; set; }     
-        //Events      
+        string Message { get; set; }
         event EventHandler PrintEvent;
         event EventHandler SelectProductEvent;
         event EventHandler SelectCustomerEvent;
+        event EventHandler CurrentEvent;
+
         event EventHandler DeleteEvent;
-       
-        //Methods
         void SetProductListBindingSource(BindingSource productList, BindingSource productList1, BindingSource productList2);
         void Show();
     }

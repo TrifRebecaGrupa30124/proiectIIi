@@ -242,7 +242,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(361, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1237, 48);
+            this.panel2.Size = new System.Drawing.Size(1356, 48);
             this.panel2.TabIndex = 1;
             // 
             // buttonCancel
@@ -251,7 +251,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.Location = new System.Drawing.Point(1118, 9);
+            this.buttonCancel.Location = new System.Drawing.Point(1059, 9);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(107, 36);
             this.buttonCancel.TabIndex = 0;
@@ -262,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1598, 820);
+            this.ClientSize = new System.Drawing.Size(1717, 820);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;

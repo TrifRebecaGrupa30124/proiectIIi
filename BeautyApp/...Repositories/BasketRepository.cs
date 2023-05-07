@@ -32,7 +32,7 @@ namespace BeautyApp.Repositories
                         var productModel = new BasketModel();
                         productModel.Id = (int)reader[0];
                         productModel.Name = reader[1].ToString();
-                        productModel.Price = reader[3].ToString();
+                        productModel.Price = reader[2].ToString();
                         productList.Add(productModel);
                     }
                 }
@@ -65,6 +65,6 @@ namespace BeautyApp.Repositories
                 command.ExecuteNonQuery();
             }
         }
-        
+
     }
 }

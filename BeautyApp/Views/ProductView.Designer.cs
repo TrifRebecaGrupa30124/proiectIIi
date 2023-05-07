@@ -80,7 +80,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClose.Location = new System.Drawing.Point(1113, 12);
+            this.btnClose.Location = new System.Drawing.Point(1057, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(107, 34);
             this.btnClose.TabIndex = 4;
@@ -117,10 +117,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Location = new System.Drawing.Point(879, 152);
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.Location = new System.Drawing.Point(839, 171);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(273, 259);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(52, 104);
+            this.dataGridView.Location = new System.Drawing.Point(28, 104);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 75;
             this.dataGridView.RowTemplate.Height = 140;
@@ -243,39 +243,39 @@
             // 
             // textProductAmmount
             // 
-            this.textProductAmmount.Location = new System.Drawing.Point(352, 298);
+            this.textProductAmmount.Location = new System.Drawing.Point(290, 297);
             this.textProductAmmount.Name = "textProductAmmount";
-            this.textProductAmmount.Size = new System.Drawing.Size(176, 28);
+            this.textProductAmmount.Size = new System.Drawing.Size(258, 28);
             this.textProductAmmount.TabIndex = 9;
             // 
             // txtProductDescription
             // 
-            this.txtProductDescription.Location = new System.Drawing.Point(352, 378);
+            this.txtProductDescription.Location = new System.Drawing.Point(290, 365);
             this.txtProductDescription.Multiline = true;
             this.txtProductDescription.Name = "txtProductDescription";
-            this.txtProductDescription.Size = new System.Drawing.Size(176, 109);
+            this.txtProductDescription.Size = new System.Drawing.Size(258, 154);
             this.txtProductDescription.TabIndex = 8;
             // 
             // txtProductPrice
             // 
-            this.txtProductPrice.Location = new System.Drawing.Point(352, 239);
+            this.txtProductPrice.Location = new System.Drawing.Point(290, 239);
             this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(176, 28);
+            this.txtProductPrice.Size = new System.Drawing.Size(258, 28);
             this.txtProductPrice.TabIndex = 7;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(352, 182);
+            this.txtProductName.Location = new System.Drawing.Point(290, 182);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(176, 28);
+            this.txtProductName.Size = new System.Drawing.Size(258, 28);
             this.txtProductName.TabIndex = 6;
             // 
             // txtProductId
             // 
-            this.txtProductId.Location = new System.Drawing.Point(352, 116);
+            this.txtProductId.Location = new System.Drawing.Point(290, 116);
             this.txtProductId.Name = "txtProductId";
             this.txtProductId.ReadOnly = true;
-            this.txtProductId.Size = new System.Drawing.Size(176, 28);
+            this.txtProductId.Size = new System.Drawing.Size(109, 28);
             this.txtProductId.TabIndex = 5;
             this.txtProductId.Text = "0";
             // 
@@ -283,7 +283,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(166, 378);
+            this.label5.Location = new System.Drawing.Point(113, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 24);
             this.label5.TabIndex = 4;
@@ -293,7 +293,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(166, 301);
+            this.label4.Location = new System.Drawing.Point(113, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 24);
             this.label4.TabIndex = 3;
@@ -303,7 +303,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(166, 239);
+            this.label3.Location = new System.Drawing.Point(113, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 2;
@@ -313,7 +313,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(166, 182);
+            this.label2.Location = new System.Drawing.Point(113, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 24);
             this.label2.TabIndex = 1;
@@ -323,7 +323,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(166, 116);
+            this.label1.Location = new System.Drawing.Point(113, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 24);
             this.label1.TabIndex = 0;

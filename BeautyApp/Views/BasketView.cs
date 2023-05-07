@@ -39,44 +39,47 @@ namespace BeautyApp.Views
 
             };
             //Edit
+            dataGridView2.Click += delegate {
 
+                CurrentEvent?.Invoke(this, EventArgs.Empty);
+                this.Update();
+            };
+
+            dataGridView3.Click += delegate {
+
+                SelectCustomerEvent?.Invoke(this, EventArgs.Empty);
+                this.Update();
+            };
 
 
             bbtndelete.Click += delegate
             {
-                var result = MessageBox.Show("Are you sure you want to delete the selected product?", "Warning",
-                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
-                {
+               
+                
                     DeleteEvent?.Invoke(this, EventArgs.Empty);
-                    MessageBox.Show(Message);
-                }
+               
             };
         }
+
         //Properties
-        /*  public string ProductId
-          {
-              get { return txtProductId.Text; }
-              set { txtProductId.Text = value; }
-          }
-
-          public string ProductName_
-          {
-              get { return txtProductName.Text; }
-              set { txtProductName.Text = value; }
-          }
-
-          public string ProductPrice
-          {
-              get { return txtProductPrice.Text; }
-              set { txtProductPrice.Text = value; }
-          }
-           public bool IsEdit
+        public string CustomerName
         {
-            get { return isEdit; }
-            set { isEdit = value; }
+            get { return ctxtname.Text; }
+            set { ctxtname.Text = value; }
         }
-         */
+
+        public string CustomerPhone
+        {
+            get { return ctxtphone.Text; }
+            set { ctxtphone.Text = value; }
+        }
+
+        public string CustomerAddress
+        {
+            get { return ctxtaddress.Text; }
+            set { ctxtaddress.Text = value; }
+        }
+
 
         public bool IsSuccessful
         {
@@ -93,6 +96,8 @@ namespace BeautyApp.Views
         public event EventHandler PrintEvent;
         public event EventHandler SelectProductEvent;
         public event EventHandler SelectCustomerEvent;
+        public event EventHandler CurrentEvent;
+        public event EventHandler CurrentEventCustomer;
 
         public event EventHandler DeleteEvent;
         //Methods
@@ -106,17 +111,15 @@ namespace BeautyApp.Views
 
              dataGridView.Columns.Add(imgCol);*/
             dataGridView1.DataSource = petList;
-
             dataGridView2.DataSource = petList1;
-
             dataGridView3.DataSource = petList2;
-
 
             // dataGridView.Rows.Add(img);
 
 
 
         }
+
 
         private static BasketView instance;
         public static BasketView GetInstance(Form parentContainer)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BeautyApp.Repositories
 {
-    class CustomerRepository: BaseRepository, ICustomerRepository
+    class CustomerRepository : BaseRepository, ICustomerRepository
     {
         public CustomerRepository(string connectionString)
         {
@@ -83,9 +83,9 @@ namespace BeautyApp.Repositories
                 command.Connection = connection;
                 command.CommandText = "insert into Customers values (@name, @email, @phone,@address)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = customerModel.Name;
-                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = customerModel.Email;
-                command.Parameters.Add("@price", SqlDbType.NVarChar).Value = customerModel.Phone;
-                command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = customerModel.Address;
+                command.Parameters.Add("@email", SqlDbType.NVarChar).Value = customerModel.Email;
+                command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = customerModel.Phone;
+                command.Parameters.Add("@address", SqlDbType.NVarChar).Value = customerModel.Address;
 
                 command.ExecuteNonQuery();
             }
@@ -110,12 +110,12 @@ namespace BeautyApp.Repositories
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"update Customers 
-                                    set Customer_Name=@name,Customer_email= @email,Customer_Phone= @phone,Customer_Address= @address
-                                    where Product_Id=@id";
+                                    set Customer_Name=@name,Customer_Email= @email,Customer_Phone= @phone,Customer_Address= @address
+                                    where Customer_Id=@id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = customerModel.Name;
-                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = customerModel.Email;
-                command.Parameters.Add("@price", SqlDbType.NVarChar).Value = customerModel.Phone;
-                command.Parameters.Add("@ammount", SqlDbType.NVarChar).Value = customerModel.Address;
+                command.Parameters.Add("@email", SqlDbType.NVarChar).Value = customerModel.Email;
+                command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = customerModel.Phone;
+                command.Parameters.Add("@address", SqlDbType.NVarChar).Value = customerModel.Address;
 
                 command.Parameters.Add("@id", SqlDbType.Int).Value = customerModel.Id;
                 command.ExecuteNonQuery();
@@ -123,4 +123,3 @@ namespace BeautyApp.Repositories
         }
     }
 }
-
