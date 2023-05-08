@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,9 @@ namespace BeautyApp.Views
 {
     public interface IBasketView
     {
+        string Total { get; set; }
         string CustomerName { get; set; }
-
+        string stringForPrint { get; set; }
         string CustomerPhone { get; set; }
         string CustomerAddress { get; set; }
         bool IsSuccessful { get; set; }

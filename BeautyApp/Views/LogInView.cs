@@ -38,7 +38,7 @@ namespace BeautyApp.Views
             set { textBoxPassword.Text = value; }
         }
         public event EventHandler LogInEvent;
-
+   
         private void AssociateAndRaiseViewEvents()
         {
             buttonLogIn.Click += delegate

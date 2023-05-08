@@ -54,6 +54,7 @@ namespace BeautyApp.Views
                 tabControlPet.TabPages.Remove(tabPagePetList);
                 tabControlPet.TabPages.Add(tabPagePetDetail);
                 tabPagePetDetail.Text = "Edit product";
+
             };
             //Save changes
             btnSave.Click += delegate
@@ -108,7 +109,7 @@ namespace BeautyApp.Views
         }
         public string ProductAmmount////////////////////
         {
-            get { return txtProductPrice.Text; }
+            get { return textProductAmmount.Text; }
             set { textProductAmmount.Text = value; }
         }
         public string SearchValue
@@ -240,3 +241,26 @@ namespace BeautyApp.Views
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

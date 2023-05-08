@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing.Printing;
 namespace BeautyApp.Views
 {
 
@@ -16,7 +16,7 @@ namespace BeautyApp.Views
         //Fields
         private string message;
         private bool isSuccessful;
-
+        private string print;
         //Constructor
         public BasketView()
         {
@@ -26,16 +26,30 @@ namespace BeautyApp.Views
             bbtnclose.Click += delegate { this.Close(); };
 
 
-
         }
         private void AssociateAndRaiseViewEvents()
         {
+            printDocument1.PrintPage += delegate {
 
+                PrintEvent?.Invoke(this, EventArgs.Empty);
+
+            };
+            printDocument1.PrintPage += new PrintPageEventHandler(pd_PrintPage);
+            // The PrintPage event is raised for each page to be printed.
+            void pd_PrintPage(object sender, PrintPageEventArgs ev)
+            {
+                // PrintPageEventArgs ke = e as PrintPageEventArgs;
+
+                ev.Graphics.DrawString(stringForPrint, new Font("Centuey Gothic", 12, FontStyle.Regular), Brushes.Black, new PointF(130, 130));
+
+            }
 
             // dataGridView1.Click += delegate { CurrentEvent?.Invoke(this, EventArgs.Empty); };
             bbtnprint.Click += delegate
             {
-                PrintEvent?.Invoke(this, EventArgs.Empty);
+                // PrintEvent?.Invoke(this, EventArgs.Empty);
+
+                printDocument1.Print();
 
             };
             //Edit
@@ -54,10 +68,17 @@ namespace BeautyApp.Views
 
             bbtndelete.Click += delegate
             {
-               
-                
+                var result = MessageBox.Show("Are you sure you want to delete the selected product?", "Warning",
+                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+
+
                     DeleteEvent?.Invoke(this, EventArgs.Empty);
-               
+
+                    MessageBox.Show(Message);
+
+                }
             };
         }
 
@@ -66,6 +87,11 @@ namespace BeautyApp.Views
         {
             get { return ctxtname.Text; }
             set { ctxtname.Text = value; }
+        }
+        public string stringForPrint
+        {
+            get { return print; }
+            set { print = value; }
         }
 
         public string CustomerPhone
@@ -90,6 +116,11 @@ namespace BeautyApp.Views
         {
             get { return message; }
             set { message = value; }
+        }
+        public string Total
+        {
+            get { return labelTotal.Text; }
+            set { labelTotal.Text = value; }
         }
 
 

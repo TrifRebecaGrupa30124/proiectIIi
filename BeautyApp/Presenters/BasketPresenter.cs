@@ -2,7 +2,9 @@
 using BeautyApp.Views;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -45,7 +47,7 @@ namespace BeautyApp.Presenters
             this.view.CurrentEvent += SelectProduct;
             this.view.PrintEvent += AddNewProduct;
             this.view.DeleteEvent += DeleteSelectedProduct;
-
+            this.view.PrintEvent += PrintPageFunction;
             this.view.SelectCustomerEvent += SelectCustomer;
 
             //Set pets bindind source
@@ -67,7 +69,14 @@ namespace BeautyApp.Presenters
             productBindingSource.DataSource = productList;//Set data source.
             cproductList = crepository.GetAll();
             cproductBindingSource.DataSource = cproductList;//Set data source.
-
+            int totalAdd = 0;
+            IEnumerable<BasketModel> c = repository.GetAll();
+            foreach (var cust in c)
+            {
+                int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
+                totalAdd = totalAdd + petId;
+            }
+            view.Total = "" + totalAdd.ToString();
         }
 
         private void SelectCustomer(object sender, EventArgs e)
@@ -77,6 +86,28 @@ namespace BeautyApp.Presenters
             view.CustomerName = customer.Name;
             view.CustomerPhone = customer.Phone;
 
+        }
+        void PrintPageFunction(object sender, EventArgs e)
+        {
+            /* PrintPageEventArgs ke = e as PrintPageEventArgs;
+             String factura = "Factura emisa \n Date client:\n Nume: "+view.CustomerName+"\n Telefon: "+view.CustomerPhone+"\n Adresa: "+view.CustomerAddress+
+                 "\n";
+             e.Graphics.DrawString("ttt", new Font("Centuey Gothic", 12, FontStyle.Regular), Brushes.Black, new PointF(130, 130));
+            */
+            int total = 0;
+            view.stringForPrint = "\n \t \t \t Factura emisa \n \n \t Date client \n Nume: " + view.CustomerName + "\n Telefon: " + view.CustomerPhone + "\n Adresa: " + view.CustomerAddress +
+              "\n \n \t Date Produse  \n";
+
+            // Print the value one column of each DataRow.\
+
+            IEnumerable<BasketModel> c = repository.GetAll();
+            foreach (var cust in c)
+            {
+                view.stringForPrint = view.stringForPrint + cust.Name + " " + cust.Price + "\n";
+                total = total + int.Parse(cust.Price);
+            }
+            view.stringForPrint = view.stringForPrint + "\n Total: " + total.ToString() + "\n \n Data emiterii facturii: " + DateTime.Now.ToString(" MM dd yyyy");
+            view.Total = "Total:" + total.ToString();
         }
 
         private void SelectProduct(object sender, EventArgs e)
@@ -90,6 +121,14 @@ namespace BeautyApp.Presenters
             model.Price = product.Price.ToString();
             repository.Add(model);
             LoadAllProductList();
+            int totalAdd = 0;
+            IEnumerable<BasketModel> c = repository.GetAll();
+            foreach (var cust in c)
+            {
+                int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
+                totalAdd = totalAdd + petId;
+            }
+            view.Total = "Total:" + totalAdd.ToString();
         }
 
 
@@ -105,7 +144,14 @@ namespace BeautyApp.Presenters
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully";
                 LoadAllProductList();
-
+                int totalAdd = 0;
+                IEnumerable<BasketModel> c = repository.GetAll();
+                foreach (var cust in c)
+                {
+                    int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
+                    totalAdd = totalAdd + petId;
+                }
+                view.Total = "Total:" + totalAdd.ToString();
 
 
             }
@@ -118,7 +164,8 @@ namespace BeautyApp.Presenters
 
         private void AddNewProduct(object sender, EventArgs e)
         {
-            //view.IsEdit = false;
+
+
         }
     }
 }

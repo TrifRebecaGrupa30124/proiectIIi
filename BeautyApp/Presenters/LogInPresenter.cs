@@ -44,6 +44,7 @@ namespace BeautyApp.Presenters
 
 
         }
+       
         private void tFunction(object obj)
         {
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["BeautyApp.Properties.Settings.SqlConnection"].ConnectionString;

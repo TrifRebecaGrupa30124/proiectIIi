@@ -32,6 +32,9 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.ctxtaddress = new System.Windows.Forms.TextBox();
             this.ctxtphone = new System.Windows.Forms.TextBox();
             this.ctxtname = new System.Windows.Forms.TextBox();
@@ -42,9 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -90,6 +93,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(452, 177);
             this.panel1.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 24);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Address";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 24);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Phone";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Name";
             // 
             // ctxtaddress
             // 
@@ -193,41 +226,33 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Bill";
             // 
-            // label4
+            // labelTotal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Name";
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(1045, 428);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(60, 24);
+            this.labelTotal.TabIndex = 16;
+            this.labelTotal.Text = "label7";
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Phone";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 125);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Address";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(931, 415);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 38);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Total:";
             // 
             // BasketView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 757);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -271,5 +296,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label label7;
     }
 }
