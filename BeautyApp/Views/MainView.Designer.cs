@@ -265,6 +265,7 @@
             this.ClientSize = new System.Drawing.Size(1717, 820);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
