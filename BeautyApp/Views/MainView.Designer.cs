@@ -126,7 +126,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.DeepPink;
             this.pictureBox4.Image = global::BeautyApp.Properties.Resources.Capture_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(37, 589);
+            this.pictureBox4.Location = new System.Drawing.Point(37, 551);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 40);
@@ -138,7 +138,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.DeepPink;
             this.pictureBox3.Image = global::BeautyApp.Properties.Resources.empl;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 470);
+            this.pictureBox3.Location = new System.Drawing.Point(37, 432);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 40);
@@ -163,7 +163,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DeepPink;
             this.pictureBox2.Image = global::BeautyApp.Properties.Resources.cust;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 353);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 315);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 45);
@@ -175,7 +175,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DeepPink;
             this.pictureBox1.Image = global::BeautyApp.Properties.Resources.product;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 233);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 195);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 42);
@@ -189,7 +189,7 @@
             this.btnbasket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbasket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbasket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnbasket.Location = new System.Drawing.Point(23, 584);
+            this.btnbasket.Location = new System.Drawing.Point(23, 546);
             this.btnbasket.Name = "btnbasket";
             this.btnbasket.Size = new System.Drawing.Size(313, 54);
             this.btnbasket.TabIndex = 4;
@@ -202,7 +202,7 @@
             this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCustomers.Location = new System.Drawing.Point(23, 464);
+            this.btnCustomers.Location = new System.Drawing.Point(23, 426);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(313, 54);
             this.btnCustomers.TabIndex = 3;
@@ -215,7 +215,7 @@
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.ForeColor = System.Drawing.Color.Azure;
-            this.btnEmployee.Location = new System.Drawing.Point(23, 349);
+            this.btnEmployee.Location = new System.Drawing.Point(23, 311);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(313, 54);
             this.btnEmployee.TabIndex = 1;
@@ -228,7 +228,7 @@
             this.btnPets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPets.Location = new System.Drawing.Point(22, 229);
+            this.btnPets.Location = new System.Drawing.Point(22, 191);
             this.btnPets.Name = "btnPets";
             this.btnPets.Size = new System.Drawing.Size(313, 54);
             this.btnPets.TabIndex = 0;
@@ -265,7 +265,6 @@
             this.ClientSize = new System.Drawing.Size(1717, 820);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.IsMdiContainer = true;
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";

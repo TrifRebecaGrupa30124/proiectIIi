@@ -26,7 +26,7 @@ namespace BeautyApp.Views
             if (instance == null || instance.IsDisposed)
             {
                 instance = new HomeView();
-                instance.MdiParent = parentContainer;
+               // instance.MdiParent = parentContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
             }

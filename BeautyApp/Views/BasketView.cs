@@ -138,6 +138,52 @@ namespace BeautyApp.Views
             }
             return instance;
         }
+        void StyleDataGridview()
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepPink;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dataGridView2.BorderStyle = BorderStyle.None;
+            dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            dataGridView2.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView2.BackgroundColor = Color.White;
+            dataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepPink;
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+            dataGridView3.BorderStyle = BorderStyle.None;
+            dataGridView3.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView3.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            dataGridView3.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView3.BackgroundColor = Color.White;
+            dataGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView3.EnableHeadersVisualStyles = false;
+            dataGridView3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView3.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 10);
+            dataGridView3.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepPink;
+            dataGridView3.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+        private void BasketView_Load(object sender, EventArgs e)
+        {
+            StyleDataGridview();
+        }
     }
 
 
