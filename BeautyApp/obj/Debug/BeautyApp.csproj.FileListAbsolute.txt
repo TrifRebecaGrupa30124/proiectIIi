@@ -56,3 +56,4 @@ D:\clonaII\proiectIIi\BeautyApp\obj\Debug\BeautyApp.exe
 D:\clonaII\proiectIIi\BeautyApp\obj\Debug\BeautyApp.pdb
 D:\clonaII\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.HomeView.resources
 D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.Views.HomeView.resources
+D:\ii\proiectIIi\proiectIIi\BeautyApp\obj\Debug\BeautyApp.csproj.CopyComplete

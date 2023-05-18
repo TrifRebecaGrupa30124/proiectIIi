@@ -76,7 +76,7 @@ namespace BeautyApp.Presenters
                 int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
                 totalAdd = totalAdd + petId;
             }
-            view.Total = "" + totalAdd.ToString();
+            view.Total = "Total:" + totalAdd.ToString();
         }
 
         private void SelectCustomer(object sender, EventArgs e)
@@ -111,24 +111,40 @@ namespace BeautyApp.Presenters
         }
 
         private void SelectProduct(object sender, EventArgs e)
-        {
+        {//https://www.google.com/search?q=how+to+make+a+chatbot+in+a+winform+c%23&rlz=1C1GCEA_enRO1017RO1017&sxsrf=APwXEdc1kja2CGm8KH5fWno1QmjylyLnRA:1683536795133&source=lnms&tbm=vid&sa=X&ved=2ahUKEwiwmI-lr-X-AhUPKewKHUZ0CK8Q_AUoAXoECAIQAw&biw=1536&bih=746&dpr=1.25#fpstate=ive&vld=cid:f4debf55,vid:2jjtz80yjlE
             var product = (ProductModel)pproductBindingSource.Current;
-            var model = new BasketModel();
-            model.Id = product.Id;
-
-            model.Name = product.Name.ToString();
-
-            model.Price = product.Price.ToString();
-            repository.Add(model);
-            LoadAllProductList();
-            int totalAdd = 0;
-            IEnumerable<BasketModel> c = repository.GetAll();
-            foreach (var cust in c)
+            if (Convert.ToInt32(product.Ammount) > 0)
             {
-                int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
-                totalAdd = totalAdd + petId;
+
+                var model = new BasketModel();
+                model.Id = product.Id;
+
+                model.Name = product.Name.ToString();
+
+                model.Price = product.Price.ToString();
+
+                var model1 = new ProductModel();
+                model1.Id = product.Id;
+
+                model1.Name = product.Name;
+                model1.Description = product.Description;
+                model1.Price = product.Price;
+                model1.Ammount = (Convert.ToInt32(product.Ammount) - 1).ToString();
+                prepository.Edit(model1);
+
+
+                repository.Add(model);
+                LoadAllProductList();
+                int totalAdd = 0;
+                IEnumerable<BasketModel> c = repository.GetAll();
+                foreach (var cust in c)
+                {
+                    int petId = int.TryParse(cust.Price, out _) ? Convert.ToInt32(cust.Price) : 0;
+                    totalAdd = totalAdd + petId;
+                }
+                view.Total = "Total:" + totalAdd.ToString();
             }
-            view.Total = "Total:" + totalAdd.ToString();
+
         }
 
 
@@ -140,7 +156,22 @@ namespace BeautyApp.Presenters
 
                 var basket = (BasketModel)productBindingSource.Current;
 
+                IEnumerable<ProductModel> product = prepository.GetByValue(basket.Name);
+
+
                 repository.Delete(basket.Id);
+
+                var model1 = new ProductModel();
+                foreach (var pr in product)
+                {
+                    model1.Id = pr.Id;
+
+                    model1.Name = pr.Name;
+                    model1.Description = pr.Description;
+                    model1.Price = pr.Price;
+                    model1.Ammount = (Convert.ToInt32(pr.Ammount) + 1).ToString();
+                    prepository.Edit(model1);
+                }
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully";
                 LoadAllProductList();

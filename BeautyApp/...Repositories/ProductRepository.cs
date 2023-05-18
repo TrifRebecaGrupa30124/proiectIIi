@@ -82,7 +82,7 @@ namespace BeautyApp.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "insert into Product values (@name, @description, @price,@ammount)";
+                command.CommandText = "insert into Product values (@name, @description, @ammount,@price)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
                 command.Parameters.Add("@price", SqlDbType.NVarChar).Value = productModel.Price;
@@ -111,7 +111,7 @@ namespace BeautyApp.Repositories
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"update Product 
-                                    set Product_Name=@name,Product_Description= @description,Product_Price= @price,Product_Amount= @ammount
+                                    set Product_Name=@name,Product_Description= @description,Product_Amount= @ammount,Product_Price= @price
                                     where Product_Id=@id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = productModel.Description;
