@@ -55,6 +55,8 @@ namespace BeautyApp.Presenters
             // Application.Run(new MainView());
         }
 
+
+
     }
 
 }

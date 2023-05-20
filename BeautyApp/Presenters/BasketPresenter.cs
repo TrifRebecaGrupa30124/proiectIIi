@@ -108,6 +108,15 @@ namespace BeautyApp.Presenters
             }
             view.stringForPrint = view.stringForPrint + "\n Total: " + total.ToString() + "\n \n Data emiterii facturii: " + DateTime.Now.ToString(" MM dd yyyy");
             view.Total = "Total:" + total.ToString();
+
+            foreach (var pr in c)
+            {
+                repository.Delete(pr.Id);
+            }
+            view.CustomerName = "";
+            view.CustomerAddress = "";
+            view.CustomerPhone = "";
+
         }
 
         private void SelectProduct(object sender, EventArgs e)
